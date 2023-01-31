@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/v1/")
+//@RequestMapping("/api/v1/")
 public class SaleItemController {
 
     private final SaleItemRepository repository;

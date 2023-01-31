@@ -17,13 +17,11 @@ import java.io.ByteArrayOutputStream;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "Requestor-Type")
-@RequestMapping(value= "/api/v1/", produces="application/json")
+//@RequestMapping(value= "/api/v1/", produces="application/json")
 public class ProductController {
 
 
@@ -36,6 +34,7 @@ public class ProductController {
         this.assembler = assembler;
     }
 
+
     @ApiOperation("Create ne Product")
     @PostMapping("/products")
     public ResponseEntity<?> saveProduct(@RequestBody Product product){
@@ -45,6 +44,7 @@ public class ProductController {
                 .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri()) //
                 .body(entityModel);
     }
+
 
     @GetMapping("/products")
     public List<EntityModel<Product>>getAllProducts(){

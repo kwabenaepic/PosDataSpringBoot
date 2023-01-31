@@ -20,7 +20,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/v1/")
+//@RequestMapping("/api/v1/")
 public class TopTenSellingViewController {
 
     private final TopTenSellingViewRepository repository;
