@@ -45,7 +45,7 @@ public class PosDataApiApplication implements CommandLineRunner {
         users.add(b1);
         users.add(b2);
 
-        userRepository.saveAll(users);
+//        userRepository.saveAll(users);
         // fetch all customers
 //        log.info("Products found with findAll():");
 //        log.info("-------------------------------");

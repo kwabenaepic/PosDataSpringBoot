@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@CrossOrigin(value = "http://localhost:3000")
+//@CrossOrigin(value = "http://localhost:3000")
 @RestController
+@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
 //@RequestMapping("/api/v1/")
 public class ReceiptsController {
 

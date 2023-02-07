@@ -37,6 +37,8 @@ MyUserDetailService service;
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http.
+                csrf().disable().
+        cors().and().
         httpBasic()
                 .and()
         .authorizeRequests()
@@ -47,6 +49,7 @@ MyUserDetailService service;
         .formLogin();
 
     }
+
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){

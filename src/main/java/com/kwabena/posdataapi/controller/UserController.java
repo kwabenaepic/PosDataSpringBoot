@@ -9,7 +9,8 @@ import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(value = "http://localhost:3000")
+//@CrossOrigin(value = "http://localhost:3000")
+@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "Requestor-Type")
 //@RequestMapping(value= "/api/v1/", produces="application/json")

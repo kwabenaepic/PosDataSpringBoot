@@ -18,7 +18,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-@CrossOrigin(value = "http://localhost:3000")
+//@CrossOrigin(value = "http://localhost:3000")
+@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "Requestor-Type")
 //@RequestMapping(value= "/api/v1/", produces="application/json")
